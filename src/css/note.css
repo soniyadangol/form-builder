@@ -1,0 +1,40 @@
+.note-wrapper, .note {
+	height: 100%;
+}
+
+.note {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.note__main {
+	height: 200px;
+	width: 200px;
+	overflow: hidden;
+}
+
+.note__image {
+	width: auto;
+	height: 100%;
+	object-fit: contain;
+}
+
+.note__content {
+	margin-top: 24px;
+	text-align: center;
+}
+
+.note__title {
+	color: var(--default-dark);
+    font-size: 18px;
+    font-weight: 600;
+	margin-bottom: 0;
+}
+
+.note__text {
+	color: var(--default);
+    font-size: 14px;
+    margin-top: 8px;
+}

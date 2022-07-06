@@ -1,0 +1,423 @@
+/* form */
+.fb-label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.fb-input,
+.fb-textarea {
+    background-color: var(--default-light);
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 16px;
+    transition: 0.3s box-shadow ease-in-out, 0.3s border ease-in-out;
+}
+
+.fb-input::placeholder,
+.fb-textarea::placeholder {
+    color: var(--default);
+    font-size: 14px;
+}
+
+.form-control.fb-input:focus,
+.form-control.fb-input:hover,
+.form-control.fb-input:active,
+.form-control.fb-textarea:focus,
+.form-control.fb-textarea:hover,
+.form-control.fb-textarea:active {
+    box-shadow: 0 0 6px 0 rgba(155, 154, 154, 0.9);
+    border-color: transparent;
+    outline: none;
+}
+
+.fb-input {
+    height: 52px;
+}
+
+.fb-button {
+    background-color: var(--primary);
+    padding: 12px 36px;
+    color: var(--text-light);
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.fb-button:hover,
+.fb-button:active,
+.fb-button:focus {
+    opacity: 0.9;
+}
+
+.fb-button:disabled,
+.fb-input:disabled,
+.fb-textarea:disabled,
+.fb-select select:disabled,
+.fb-toggle input:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.fb-secondary-button {
+    min-width: 135px;
+    padding: 12px 16px;
+    text-align: left;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    background-color: rgba(176, 164, 211, 0.7);
+    border-radius: 8px;
+
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 20px;
+
+    transition: border 0.3s ease-in-out;
+}
+
+.fb-secondary-button:hover,
+.fb-secondary-button:active,
+.fb-secondary-button:focus {
+    border: 1px solid var(--text-light);
+}
+
+.fb-secondary-button__icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    margin-right: 8px;
+}
+
+.fb-tertiary-button {
+    background-color: var(--tertiary);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+/* checkbox */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    color: var(--default-dark);
+    margin-bottom: 12px;
+}
+
+.checkbox-container:last-child {
+    margin-bottom: 12px;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkbox-container .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: var(--default-light);
+    border-radius: 4px;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input~.checkmark {
+    background-color: var(--default-light);
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked~.checkmark {
+    background-color: var(--primary);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkbox-container .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--text-light);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Custom radio button */
+.radio-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.radio-container .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: var(--default-light);
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-container:hover input~.checkmark {
+    background-color: var(--default-light);
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked~.checkmark {
+    background-color: var(--primary);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio-container .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--text-light);
+}
+
+/* end */
+
+/* custom toggle button */
+.fb-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.fb-toggle__text {
+    margin-right: 12px;
+    margin-bottom: 0;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 26px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--default-light);
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 3px;
+    background-color: var(--text-light);
+    transition: 0.4s;
+}
+
+input:checked+.slider {
+    background-color: var(--tertiary);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px var(--tertiary);
+}
+
+input:checked+.slider:before {
+    transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* end */
+
+.fb-select select {
+    /* Reset Select */
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    /* Personalize */
+    flex: 1;
+    padding: 0 1em;
+    color: var(--default-dark);
+    background-color: var(--default-light);
+    background-image: none;
+    cursor: pointer;
+    
+    border-radius: 8px;
+    padding: 12px 16px;
+}
+
+/* Remove IE arrow */
+.fb-select select::-ms-expand {
+    display: none;
+}
+
+/* Custom Select wrapper */
+.fb-select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    border-radius: .25em;
+    overflow: hidden;
+}
+
+/* Arrow */
+.fb-select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    transition: .25s all ease;
+    pointer-events: none;
+    background-color: var(--tertiary);
+    color: var(--text-light);
+}
+
+/* end */
+
+/* button group */
+.button-group {
+    display: flex;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.button-group:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.button-group__button {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+/* form ends */
+
+/* heading */
+.heading {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.heading__emphasized {
+    text-transform: uppercase;
+}
+
+.heading--secondary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* heading ends */
+
+/* action-button */
+.action-button-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: -6px;
+    margin-right: -6px;
+}
+
+.action-button {
+    padding-left: 6px;
+    padding-right: 6px;
+
+    border: none;
+    background: transparent;
+}
+
+.action-button-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.action-button:disabled {
+    opacity: 0.4;
+}
+
+/* end */
+.fb-input-wrapper {
+    margin-bottom: 24px;
+}

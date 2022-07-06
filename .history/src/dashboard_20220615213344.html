@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Form Builder</title>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- sidebar -->
+        <aside class="side-bar">
+            <div class="side-bar__header">
+                <a href="/dashboard.html">
+                    <img src="images/logo-light.png" alt="logo light">
+                </a>
+            </div>
+            <section class="side-bar__main">
+                <p class="side-bar__text">Input Types</p>
+                <div class="button-group">
+                    <button type="button" class="fb-secondary-button button-group__button" data-type="text">
+                        <img src="images/text.png" alt="text icon" class="fb-secondary-button__icon">
+                        Text
+                    </button>
+                    <button type="button" class="fb-secondary-button button-group__button" data-type="number">
+                        <img src="images/number.png" alt="number icon" class="fb-secondary-button__icon">
+                        Number
+                    </button>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="fb-secondary-button button-group__button" data-type="date">
+                        <img src="images/date.png" alt="icon" class="fb-secondary-button__icon">
+                        Date
+                    </button>
+                    <button type="button" class="fb-secondary-button button-group__button" data-type="datetime-local">
+                        <img src="images/datetime.png" alt="icon" class="fb-secondary-button__icon">
+                        DateTime
+                    </button>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="fb-secondary-button button-group__button" data-type="textarea">
+                        <img src="images/textarea.png" alt="icon" class="fb-secondary-button__icon">
+                        Textarea
+                    </button>
+                    <button type="button" class="fb-secondary-button button-group__button" data-type="email">
+                        <img src="images/email.png" alt="icon" class="fb-secondary-button__icon">
+                        Email
+                    </button>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="fb-secondary-button button-group__button" data-type="button">
+                        <img src="images/button.png" alt="icon" class="fb-secondary-button__icon">
+                        Button
+                    </button>
+                    <button type="button" class="fb-secondary-button button-group__button" data-type="submit">
+                        <img src="images/submit.png" alt="icon" class="fb-secondary-button__icon">
+                        Submit
+                    </button>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="fb-secondary-button button-group__button" data-type="checkbox">
+                        <img src="images/checkbox.png" alt="icon" class="fb-secondary-button__icon">
+                        Checkbox
+                    </button>
+                    <button type="button" class="fb-secondary-button button-group__button" data-type="radio">
+                        <img src="images/radio.png" alt="icon" class="fb-secondary-button__icon">
+                        Radio
+                    </button>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="fb-secondary-button button-group__button" data-type="toggle-switch">
+                        <img src="images/toggle.png" alt="icon" class="fb-secondary-button__icon">
+                        Toggle
+                    </button>
+                    <button type="button" class="fb-secondary-button button-group__button" data-type="time">
+                        <img src="images/time.png" alt="icon" class="fb-secondary-button__icon">
+                        Time
+                    </button>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="fb-secondary-button button-group__button" data-type="dropdown">
+                        <img src="images/dropdown.png" alt="icon" class="fb-secondary-button__icon">
+                        Dropdown
+                    </button>
+                </div>
+            </section>
+        </aside>
+        <main class="main-content">
+            <div class="main-wrapper">
+                <div class="list-wrapper"></div>
+                
+                <div class="section-wrapper"></div>
+                <!-- <div class="section-wrapper">
+                    <p class="heading">
+                        1. Input Type - <span class="heading__emphasized">text</span>
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="name" class="fb-label">Label</label>
+                                <input
+                                    type="text"
+                                    placeholder="Enter the label"
+                                    class="form-control fb-input"
+                                />
+                                <p class="error-message"></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="name" class="fb-label">Placeholder</label>
+                                <input
+                                    type="text"
+                                    placeholder="Enter the placeholder"
+                                    class="form-control fb-input"
+                                />
+                                <p class="error-message"></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <label for="name" class="fb-label">Additional Validation</label>
+                            <div class="fb-row">
+                                <div class="fb-col">
+                                    <input
+                                        type="number"
+                                        placeholder="Max"
+                                        class="form-control fb-input"
+                                    />
+                                </div>
+                                <div class="fb-col">
+                                    <input
+                                        type="number"
+                                        placeholder="Min"
+                                        class="form-control fb-input"
+                                    />
+                                </div>
+                                <div class="fb-col">
+                                    <label class="checkbox-container">Required
+                                        <input type="checkbox" checked="checked">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-wrapper__button">
+                        <button type="button" class="fb-tertiary-button">Done</button>
+                    </div>
+                </div>
+                <div class="section-wrapper">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="heading heading--secondary">
+                                <p>2. Input Type - <span class="heading__emphasized">text</span></p> 
+                                <div class="action-button-wrapper">
+                                    <button type="button" class="action-button" title="Edit">
+                                        <img src="images/edit.png" alt="edit" class="action-button-icon">
+                                    </button>
+                                    <button type="button" class="action-button" title="Delete">
+                                        <img src="images/trash.png" alt="edit" class="action-button-icon">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="fb-label">Label</label>
+                                <input
+                                    type="text"
+                                    placeholder="Enter the label"
+                                    class="form-control fb-input"
+                                />
+                                <p class="error-message"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+				
+				<button type="submit" class="fb-button submit-button" hidden>Submit</button>
+			</div>
+        </main>
+    </div>
+</body>
+</html>

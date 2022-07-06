@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    position: relative;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 20px;
+    color: var(--default-dark);
+}
+
+.container {
+    max-width: 750px;
+}
+
+.error-message,
+.error-input,
+.required {
+    color: red;
+}
+
+.input-wrapper.show {
+    border: 1px solid #ced4da;
+    padding: 14px;
+}
+
+#select-input-type {
+    width: 200px;
+}
+
+input.required {
+    width: auto;
+}
+
+

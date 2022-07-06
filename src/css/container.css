@@ -1,0 +1,32 @@
+/* main content */
+.main-content {
+    width: 100%;
+    padding: 30px;
+}
+
+.main-wrapper {
+    box-shadow: 0 0 51px 0 rgba(0, 0, 0, 0.10);
+    padding: 30px;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.container--lg {
+    max-width: 996px;
+}
+
+.container--md {
+    max-width: 740px;
+}
+
+.container--sm {
+    max-width: 550px;
+}
+
+.container--xs {
+    max-width: 344px;
+}
+
+.container__segment {
+    margin-bottom: 24px;
+}

@@ -1,0 +1,15 @@
+.stepper {
+    display: flex;
+
+    list-style: none;
+    border-bottom: 1px solid var(--border);
+}
+
+.stepper__item {
+    display: flex;
+    align-items: center;
+}
+
+.stepper__item:not(:last-child) {
+    padding-right: 32px;
+}

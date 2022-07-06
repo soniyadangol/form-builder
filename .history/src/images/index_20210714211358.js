@@ -1,0 +1,1 @@
+import img from '../images/circle2.png';

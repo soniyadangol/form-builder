@@ -1,0 +1,12 @@
+.stepper {
+    display: flex;
+    
+    list-style: none;
+    margin-left: -24px;
+    margin-right: -24px;
+}
+
+.stepper__item {
+    padding-left: 24px;
+    padding-right: 24px;
+}

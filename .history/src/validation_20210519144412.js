@@ -1,0 +1,49 @@
+const input = document.querySelector('.form-control');
+const pattern = /^[a-zA-Z]{2,}$/;
+
+
+export const addValidation = (element => {
+    let minValue = element.getAttribute('min');
+    let maxValue = element.getAttribute('max');
+
+    const errorMessage = element.nextElementSibling;
+    if(minValue) {
+        console.log('min');
+    }
+
+    else if(maxValue) {
+        console.log('max');
+    }
+
+    const html = `
+        <p>${element.name} is required.</p>
+    `;
+
+    errorMessage.innerHTML = html;
+});
+
+export const removeValidation = element => {
+    if(element.parentElement.querySelector('.error-message')) {
+        element.parentElement.querySelector('.error-message').remove();
+    }
+};
+
+export const addKeyUpEvent = input => {
+    let minValue = input.getAttribute('min');
+    let maxValue = input.getAttribute('max');
+
+    input.addEventListener('keyup', event => {
+        if(input.getAttribute('mandatory') == 'true') {
+            removeValidation(event.target);
+        }
+        if(input.value.length > maxValue) {
+            addValidation(input);
+        }
+    
+        else if(input.value.length < minValue) {
+            addValidation(input);
+        }
+    });
+};
+
+addKeyUpEvent(input);

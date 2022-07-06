@@ -1,0 +1,25 @@
+.list__section {
+    width: 30%;
+}
+
+.info-wrapper {
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.info-item {
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+    color: var(--default-dark);
+}
+
+.info-item__title {
+    font-size: 16px;
+    line-height: normal;
+    font-weight: bold;
+}
+
+.info-item__text {
+    font-size: 14px;
+    line-height: normal;
+}

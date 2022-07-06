@@ -1,0 +1,17 @@
+.note {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.note__main {
+	height: 180px;
+	width: 180px;
+	overflow: hidden;
+}
+
+.note__image {
+	width: auto;
+	height: 100%;
+}

@@ -1,0 +1,10 @@
+.stepper {
+    display: flex;
+
+    list-style: none;
+}
+
+.stepper__item:not(:last-child) {
+    padding-right: 32px;
+    border-bottom: 1px solid var(--border);
+}

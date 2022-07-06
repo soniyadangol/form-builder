@@ -1,0 +1,74 @@
+.main-container {
+    background-color: var(--default-lighter);
+    background-image: url('../images/bg.png');
+    height: 100%;
+
+    display: flex;   
+}
+
+.left-part, .right-part {
+    max-width: 50%;
+    flex-basis: 50%;
+}
+
+.left-part {
+    background: url('../images/bg-circle1.png') no-repeat;
+    background-position: left -10px top -10px;
+    background-size: 38%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-image {
+    max-height: 460px;
+}
+
+.description {
+    font-size: 20px;
+    color: var(--default-dark);
+    line-height: 26px;
+    margin-top: 40px;
+}
+
+.right-part {
+    background-image: url('../images/circle3.png'), url('../images/circle2.png');
+    background-position: right 36px top 36px, right -40px bottom -20px;
+    background-size: 5%, 32%;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-builder-wrapper {
+    background-color: var(--default-lighter);
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 0 42px 0 rgb(0 0 0 / 10%);
+
+    max-width: 560px;
+    width: 100%;
+}
+
+.form-builder-logo-wrapper {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.form-builder-logo {
+    height: 70px;
+    object-fit: contain;
+}
+
+.form-builder-form {
+    margin-bottom: 0;
+}
+
+.submit-button {
+    margin-top: 30px;
+}

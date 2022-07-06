@@ -1,0 +1,22 @@
+.form-container__title {
+    font-size: 32px;
+    line-height: normal;
+    font-weight: 600;
+
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.form-container__description {
+    color: var(--default);
+    font-size: 16px;
+    line-height: normal;
+
+    text-align: center;
+}
+
+.new-form {
+    max-width: 445px;
+    margin-left: auto;
+    margin-right: auto;
+}
