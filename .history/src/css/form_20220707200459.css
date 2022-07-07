@@ -9,10 +9,11 @@
 
 .form-container__description {
     color: var(--default);
-    font-size: 16px;
+    font-size: 14px;
     line-height: normal;
 
     text-align: center;
+    margin-bottom: 32px;
 }
 
 .new-form {
