@@ -1,5 +1,5 @@
-import { cSubmitButton, cCheckBox, fetchStepper, cSelect, cToggleSwitch } from "./shared";
-import { formValidation } from "./validation";
+import { cButton, cSubmitButton, cCheckBox, fetchStepper, cSelect, cToggleSwitch } from "./shared";
+import { isTextInputValid, formValidation } from "./validation";
 
 const body = document.querySelector('body .main-wrapper');
 export const formContainer = document.createElement('div');
